@@ -5,10 +5,10 @@
 // const to conform to common practices. Do not change 
 // the strings assigned to the variables.
 
-var fCC = "freeCodeCamp"; // Change this line
-var fact = "is cool!"; // Change this line
-fact = "is awesome!";
-console.log(fCC, fact); // Change this line
+// var fCC = "freeCodeCamp"; // Change this line
+// var fact = "is cool!"; // Change this line
+// fact = "is awesome!";
+// console.log(fCC, fact); // Change this line
 
 
 
