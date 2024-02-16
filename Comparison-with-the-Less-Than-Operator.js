@@ -1,5 +1,5 @@
-Add the less than operator to the indicated
- lines so that the return statements make sense.
+// Add the less than operator to the indicated
+//  lines so that the return statements make sense.
 
  function testLessThan(val) {
     if (val < 25) {  // Change this line
