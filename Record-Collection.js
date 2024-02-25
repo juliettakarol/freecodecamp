@@ -14,7 +14,6 @@ const recordCollection = {
       tracks: ['Let It Rock', 'You Give Love a Bad Name']
     },
     2468: {
-      albumTitle: '1999',
       artist: 'Prince',
       tracks: ['1999', 'Little Red Corvette']
     },
@@ -26,20 +25,19 @@ const recordCollection = {
       albumTitle: 'ABBA Gold'
     }
   };
-  
+   
   // Only change code below this line
-    function updateRecords(records, id, prop, value) {
-    if (value === '') {
-      delete records.prop
-    } if (prop !== 'tracks' && value !== '' ){
-      records.tracks = [value]
-    } if (prop === 'tracks' && value !== '' ){
-      records.value = prop
-    } if (prop === 'tracks' && value !== '' ){
-      records.track.push(value)
+  function updateRecords(records, id, prop, value) {
+      if (value === '') {
+    delete records[id][prop]
+  }if (prop !== 'tracks' && value !== '' ){
+    records[id][prop] = value
+    } if (prop === 'tracks' && value !== '' && records[id].hasOwnProperty('tracks') ){
+      records[id].tracks.push(value)
+    } if (prop === 'tracks' && value !== '' && !records[id].hasOwnProperty('tracks') ){
+      records[id].tracks = [value]
     }
     return records;
   }
   
-  
-  console.log (updateRecords(recordCollection, 5439, 'artist', 'ABBA'))
+  updateRecords(recordCollection, 5439, 'artist', 'ABBA');
