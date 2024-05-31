@@ -8,20 +8,27 @@
 
 const users = {
     Alan: {
-      online: false
+        online: false
     },
     Jeff: {
-      online: true
+        online: true
     },
     Sarah: {
-      online: false
+        online: false
     }
-  }
-  
-  function countOnline(allUsers) {
+}
+
+function countOnline(allUsers) {
     // Only change code below this line
-  
+    let i = 0
+    for (const key in allUsers) {
+        if (allUsers[key].online === true) {
+            i++
+        }
+    }
+    return i
+
     // Only change code above this line
-  }
-  
-  console.log(countOnline(users));
+}
+
+console.log(countOnline(users));
